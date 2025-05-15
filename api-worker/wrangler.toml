@@ -1,0 +1,15 @@
+name = "api-worker"
+main = "src/index.js"
+compatibility_date = "2024-05-14"
+
+# D1 database binding
+[[d1_databases]]
+binding = "DB" # i.e. env.DB
+database_name = "activity-db"
+database_id = "1fe8db6e-60b3-4cb1-a92e-6edf004c2878"
+
+[vars]
+# In a real application, set this in your Cloudflare dashboard or via `wrangler secret put JWT_SECRET`
+JWT_SECRET = "your-super-secret-and-long-jwt-key-for-dev-only-replace-in-prod"
+ENCRYPTION_KEY_SECRET = "your-super-secret-encryption-key-for-dev-only-replace-in-prod"
+
